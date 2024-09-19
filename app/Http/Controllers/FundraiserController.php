@@ -75,7 +75,7 @@ class FundraiserController extends Controller
             }
         });
 
-        return redirect()->route('admin.fundraisers.index');
+        return to_route('admin.fundraisers.index');
     }
 
     /**

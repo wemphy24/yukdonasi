@@ -61,7 +61,7 @@ class DonaturController extends Controller
             ]);
         });
 
-        return redirect()->route('admin.donaturs.show', $donatur);
+        return to_route('admin.donaturs.show', $donatur);
     }
 
     /**

@@ -54,7 +54,7 @@ class FundraisingPhaseController extends Controller
             ]);
             
         });
-        return redirect()->route('admin.my-withdrawals');
+        return to_route('admin.my-withdrawals');
     }
 
     /**

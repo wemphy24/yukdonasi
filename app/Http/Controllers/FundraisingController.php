@@ -77,7 +77,7 @@ class FundraisingController extends Controller
             ]);
         });
 
-        return redirect()->route('admin.fundraisings.show', $fundraising);
+        return to_route('admin.fundraisings.show', $fundraising);
     }
 
     /**
@@ -125,7 +125,7 @@ class FundraisingController extends Controller
             $fundraising->update($validated);
         });
 
-        return redirect()->route('admin.fundraisings.show', $fundraising);
+        return to_route('admin.fundraisings.show', $fundraising);
     }
 
     /**
