@@ -16,4 +16,9 @@ class FundraisingPhase extends Model
         'photo',
         'notes'
     ];
+
+    public function fundraising()
+    {
+      return $this->belongsTo('App\Models\Fundraising', 'fundraising_id', 'id');
+    }
 }

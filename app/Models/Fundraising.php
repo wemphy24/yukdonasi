@@ -46,4 +46,19 @@ class Fundraising extends Model
     {
       return $this->hasMany('App\Models\FundraisingWithdrawal', 'fundraising_id');
     }
+
+    public function fundraising_phases()
+    {
+      return $this->hasMany('App\Models\FundraisingPhase', 'fundraising_id');
+    }
+
+    public function getPercentage()
+    {
+      $totalDonations = $this->totalReachedAmount();
+      if($this->target_amount > 0) {
+        $percentage = ($totalDonations / $this->target_amount) * 100;
+        return $percentage > 100 ? 100 : $percentage;
+      }
+      return 0;
+    }
 }
